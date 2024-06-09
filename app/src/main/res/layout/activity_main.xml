@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:background="@drawable/background1"
+            android:gravity="center"
+            android:text="PLAYER"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="266dp"
+            android:layout_height="55dp"
+            android:background="@drawable/background2"
+            android:gravity="center"
+            android:hint="Enter Your Name"
+            android:textSize="19sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/operation"
+            android:layout_width="200dp"
+            android:layout_height="55dp"
+            android:background="@drawable/background1"
+            android:gravity="center"
+            android:hint="operation"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/answer"
+            android:layout_width="166dp"
+            android:layout_height="55dp"
+            android:background="@drawable/background2"
+            android:gravity="center"
+            android:hint="Answer"
+            android:textSize="19sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="55dp"
+            android:background="@drawable/background3"
+            android:gravity="center"
+            android:text="SCORE"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="166dp"
+            android:layout_height="55dp"
+            android:background="@drawable/background4"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:hint="0"
+            android:textColorHint="@color/white"
+            android:textSize="19sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/validate"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0288D1"
+        android:text="VALIDATE"
+        android:textSize="26sp"
+        app:cornerRadius="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <Button
+        android:id="@+id/B1"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="24dp"
+        android:text="1"
+        android:onClick="insertbutton"
+        app:cornerRadius="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/validate" />
+
+    <Button
+        android:id="@+id/B2"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="24dp"
+        android:text="2"
+        android:onClick="insertbutton"
+        app:cornerRadius="2dp"
+        app:layout_constraintStart_toEndOf="@id/B1"
+        app:layout_constraintTop_toBottomOf="@+id/validate" />
+    <Button
+        android:id="@+id/B3"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="24dp"
+        android:text="3"
+        android:onClick="insertbutton"
+        app:cornerRadius="2dp"
+        app:layout_constraintStart_toEndOf="@id/B2"
+        app:layout_constraintTop_toBottomOf="@+id/validate" />
+
+    <Button
+        android:id="@+id/Delete"
+        android:layout_width="128dp"
+        android:layout_height="187dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="23dp"
+        android:text="DELETE"
+        app:cornerRadius="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/B3"
+        app:layout_constraintTop_toBottomOf="@+id/validate" />
+
+    <Button
+        android:id="@+id/B4"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="2dp"
+        android:text="4"
+        android:onClick="insertbutton"
+        app:cornerRadius="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/B1" />
+    <Button
+        android:id="@+id/B5"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:text="5"
+        android:onClick="insertbutton"
+        app:cornerRadius="2dp"
+        app:layout_constraintStart_toEndOf="@id/B1"
+        app:layout_constraintTop_toBottomOf="@+id/B2" />
+
+    <Button
+        android:id="@+id/B6"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:text="6"
+        android:onClick="insertbutton"
+        app:cornerRadius="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/B5"
+        app:layout_constraintTop_toBottomOf="@+id/B3" />
+
+    <Button
+        android:id="@+id/B7"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="2dp"
+        android:text="7"
+        android:onClick="insertbutton"
+        app:cornerRadius="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/B4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/B8"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:text="8"
+        android:onClick="insertbutton"
+        app:cornerRadius="2dp"
+        app:layout_constraintStart_toEndOf="@id/B7"
+        app:layout_constraintTop_toBottomOf="@+id/B5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/B9"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:text="9"
+        android:onClick="insertbutton"
+        app:cornerRadius="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/B8"
+        app:layout_constraintTop_toBottomOf="@+id/B6"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/B0"
+        android:layout_width="215dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="2dp"
+        android:onClick="insertbutton"
+        android:text="0"
+        app:cornerRadius="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/B8"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/Bminus"
+        android:layout_width="62dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:onClick="insertbutton"
+        android:text="-"
+        app:cornerRadius="2dp"
+        app:layout_constraintStart_toEndOf="@+id/B0"
+        app:layout_constraintTop_toBottomOf="@+id/Delete" />
+
+    <Button
+        android:id="@+id/Bcomma"
+        android:layout_width="62dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:onClick="insertbutton"
+        android:text="."
+        app:cornerRadius="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/Bminus"
+        app:layout_constraintTop_toBottomOf="@+id/Delete"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
